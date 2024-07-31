@@ -6,7 +6,7 @@ const Footer = () => {
   const pathName = useLocation();
 
   return (
-    <section className="w-full bg-[#151516] text-white block ">
+    <div className="w-full bg-[#151516] text-white block ">
       <div className="CONTENT_WRAPPER w-11/12 lg:w-9/12 mx-auto py-20 block">
         <div className="flex lg:flex-row flex-col pb-14 items-start gap-x-36 gap-y-20">
           <div className="flex flex-col gap-6">
@@ -55,12 +55,14 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex lg:flex-row max-lg:w-full items-start gap-y-4 gap-x-8">
+          <div className="flex flex-col lg:flex-row max-lg:w-full items-start gap-y-4 gap-x-8">
             <FooterLinkList
               footerHeading="Product"
               footerLinks={["Home", "Product", "About", "Pricing"]}
               pathName={pathName}
             />
+            <div className="w-full h-[2px] bg-gray-500 mb-10 lg:hidden"></div>
+
             <FooterLinkList
               footerHeading="Utility"
               footerLinks={[
@@ -72,6 +74,8 @@ const Footer = () => {
               pathName={pathName}
               utils={true}
             />
+            <div className="w-full h-[2px] bg-gray-500 mb-10 lg:hidden"></div>
+
             <FooterLinkList
               footerHeading="Follow Us"
               footerLinks={["Facebook", "Instagram", "Twitter", "LinkedIn"]}
@@ -82,7 +86,7 @@ const Footer = () => {
 
         <Separator width="full" />
 
-        <div className="flex flex-col-reverse lg:flex-row justify-between items-center pt-14">
+        <div className="flex flex-col-reverse max-lg:gap-10 lg:flex-row justify-between items-center pt-14">
           <div className="text-sm max-lg:text-xl max-lg:mt-5">
             Made by{" "}
             <a href="https://www.linkedin.com/in/samridda-devkota-1733992a1/">
@@ -91,7 +95,7 @@ const Footer = () => {
             and design by <a href="https://webflow.com/">Webflow</a>
           </div>
 
-          <div className="flex lg:flex-row flex-col justify-center gap-x-0 gap-y-4 lg:gap-y-0 lg:gap-x-6">
+          <div className="flex lg:flex-row lg:w-auto w-full flex-col justify-center gap-x-0 gap-y-4 lg:gap-y-0 lg:gap-x-6">
             <a
               href="/"
               aria-current="page"
@@ -116,7 +120,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 export default Footer;
@@ -142,8 +146,8 @@ const FooterLinkList = ({
   };
 
   return (
-    <div className="flex lg:flex-col items-start">
-      <div className="mb-4 font-semibold">{footerHeading}</div>
+    <div className="flex flex-col items-start">
+      <div className="mb-4 max-sm:text-xl font-semibold">{footerHeading}</div>
       {footerLinks.map((linkHeading) => {
         const link = generateLink(linkHeading);
         const fullLink = utils ? `${UTILITY_PAGE}${link}` : link;
@@ -152,7 +156,7 @@ const FooterLinkList = ({
           <Link
             to={fullLink}
             key={link}
-            className={`py-2 text-sm no-underline hover:text-[#2e47c7] transition-colors
+            className={`py-2 text-base lg:text-sm no-underline hover:text-[#2e47c7] transition-colors
               ${isActiveLink(link) ? "active-link-class" : ""}`}
           >
             {linkHeading}

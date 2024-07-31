@@ -10,7 +10,7 @@ import Partners from "./components/Partners";
 import Testimonials from "./components/Testimonials";
 function App() {
   return (
-    <div className="flex flex-col items-center bg-[#fbfbfb] relative justify-center">
+    <div className="flex flex-col w-full items-center bg-[#fbfbfb] relative justify-center">
       <NavBar />
       <main className="w-full">
         <Hero />

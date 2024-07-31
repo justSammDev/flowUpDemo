@@ -8,7 +8,7 @@ const Button = ({ theme, text, arrow, width, link }) => {
           ? "text-white bg-gradient-to-r from-[#3a58fa] to-[#111a46] hover:from-[#3a58fa] hover:to-[#3a58fa] pl-7 pr-4 justify-center"
           : "text-black border border-gray-300 bg-white hover:bg-[#ff5c21] transition-colors duration-100"
       } ${
-        width ? `max-lg:w-${width} ${width} max-lg:block` : ""
+        width ? `max-lg:w-${width} ${width} max-sm:justify-center` : ""
       } rounded-[9rem] items-center justify-between `}
     >
       <Link to={link ? link : "/"} className="text-lg">

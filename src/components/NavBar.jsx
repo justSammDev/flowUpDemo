@@ -7,7 +7,7 @@ export default function NavBar() {
   const location = useLocation().pathname;
 
   return (
-    <div className="fixed top-0 max-sm:max-w-screen-sm w-full bg-[#fbfbfb] z-50">
+    <div className="fixed top-0 w-full bg-[#fbfbfb] z-50">
       <div className="flex w-11/12 h-16 mx-auto md:h-14 md:w-10/12 lg:h-14 lg:w-9/12 items-center justify-between md:justify-around px-4 bg-[#fbfbfb] lg:px-0 md:px-0 lg:justify-around py-3 lg:mb-3 z-10 ">
         <Link
           to={"/"}
@@ -28,7 +28,7 @@ export default function NavBar() {
                 location === "/"
                   ? "text-blue-600"
                   : "text-black hover:text-blue-600"
-              } transition duration-300`}
+              } transition duration-300 text-sm font-normal font-inter`}
             >
               Home
             </Link>
@@ -38,7 +38,7 @@ export default function NavBar() {
                 location === "/product"
                   ? "text-blue-600"
                   : "text-black hover:text-blue-600"
-              } transition duration-300`}
+              } transition duration-300 text-sm font-normal font-inter`}
             >
               Product
             </Link>
@@ -48,7 +48,7 @@ export default function NavBar() {
                 location === "/pricing"
                   ? "text-blue-600"
                   : "text-black hover:text-blue-600"
-              } transition duration-300`}
+              } transition duration-300 text-sm font-normal font-inter`}
             >
               Pricing
             </Link>
@@ -58,7 +58,7 @@ export default function NavBar() {
                 location === "/about"
                   ? "text-blue-600"
                   : "text-black hover:text-blue-600"
-              } transition duration-300`}
+              } transition duration-300 text-sm font-normal font-inter`}
             >
               About
             </Link>
@@ -68,7 +68,7 @@ export default function NavBar() {
                 location === "/test"
                   ? "text-blue-600"
                   : "text-black hover:text-blue-600"
-              } transition duration-300`}
+              } transition duration-300 text-sm font-normal font-inter`}
             >
               Test
             </Link> */}
@@ -107,7 +107,7 @@ export default function NavBar() {
             </a>
             <Link
               to={"pricing"}
-              className="w-fit h-fit border rounded-full py-2 px-6 "
+              className="w-fit h-fit border rounded-full py-2 px-6 text-sm"
             >
               Get Started
             </Link>
