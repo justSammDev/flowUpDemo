@@ -1,33 +1,65 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import Pricing from "./pages/Pricing.jsx";
-import About from "./pages/About.jsx";
-import Product from "./pages/Product.jsx";
 import "./index.css";
 import { HelmetProvider } from "react-helmet-async";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Test from "./components/Test.jsx";
+import ScrollToTop from "./utils/ScrollToTop.jsx";
+import Spinner from "./utils/Spinner.jsx";
+
+const Home = lazy(() => import("./pages/Home.jsx"));
+const Pricing = lazy(() => import("./pages/Pricing.jsx"));
+const About = lazy(() => import("./pages/About.jsx"));
+const Product = lazy(() => import("./pages/Product.jsx"));
+const Test = lazy(() => import("./components/Test.jsx"));
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: (
+      <Suspense fallback={<Spinner />}>
+        <ScrollToTop />
+        <Home />
+      </Suspense>
+    ),
   },
   {
     path: "/pricing",
-    element: <Pricing />,
+    element: (
+      <Suspense fallback={<Spinner />}>
+        <ScrollToTop />
+        <Pricing />
+      </Suspense>
+    ),
   },
   {
     path: "/about",
-    element: <About />,
+    element: (
+      <Suspense fallback={<Spinner />}>
+        <ScrollToTop />
+        <About />
+      </Suspense>
+    ),
   },
   {
     path: "/product",
-    element: <Product />,
+    element: (
+      <Suspense fallback={<Spinner />}>
+        <ScrollToTop />
+        <Product />
+      </Suspense>
+    ),
   },
-  { path: "/test", element: <Test /> },
+  {
+    path: "/test",
+    element: (
+      <Suspense fallback={<Spinner />}>
+        <ScrollToTop />
+        <Test />
+      </Suspense>
+    ),
+  },
 ]);
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <HelmetProvider>

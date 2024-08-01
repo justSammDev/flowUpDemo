@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Button from "./Button";
 import { useInView } from "react-intersection-observer";
 
@@ -30,7 +29,7 @@ const Subhero = () => {
             </div>
 
             <div className="flex flex-col lg:flex-row flex-wrap mt-0 max-sm:w-full max-md:justify-center max-md:items-center items-center gap-4">
-              <Link to="/pricing" className="w-full lg:w-auto">
+              <div className="w-full lg:w-auto">
                 <Button
                   text="Get Started"
                   arrow={true}
@@ -38,10 +37,10 @@ const Subhero = () => {
                   width="full"
                   link="/pricing"
                 />
-              </Link>
-              <Link to="/get-demo" className="w-full lg:w-auto">
+              </div>
+              <div className="w-full lg:w-auto">
                 <Button text="Get demo" width="full" link="/get-demo" />
-              </Link>
+              </div>
             </div>
           </div>
 

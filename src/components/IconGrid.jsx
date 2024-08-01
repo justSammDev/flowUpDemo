@@ -72,7 +72,7 @@ const IconGrid = () => {
 };
 export default IconGrid;
 
-const SVGIcon1 = () => (
+export const SVGIcon1 = () => (
   <svg
     id="Layer_1"
     data-name="Layer 1"
