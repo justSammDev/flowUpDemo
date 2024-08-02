@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "../utils/Button";
 import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
@@ -8,7 +8,7 @@ const Hero = () => {
   });
   return (
     <section
-      className={`HERO mt-12 lg:mt-32 w-10/12 lg:w-9/12 mx-auto flex flex-col  bg-gradient-to-b from-[#e7ebfa] from-70% to-white rounded-3xl items-center`}
+      className={`HERO mt-24 lg:mt-32 w-10/12 lg:w-9/12 mx-auto flex flex-col  bg-gradient-to-b from-[#e7ebfa] from-70% to-white rounded-3xl items-center`}
     >
       <div className="p-8 pt-12 lg:p-14 flex flex-col items-center gap-8">
         <div ref={ref} className="HERO_TEXT  flex items-center flex-col gap-4">

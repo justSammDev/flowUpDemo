@@ -9,16 +9,17 @@ const IconGrid = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
+
   return (
     <section className="ICON_GRID w-full">
-      <div className="SECTION_WRAPPER max-sm:w-11/12 lg:w-9/12 mx-auto pb-12 pt-24 md:py-16 lg:py-20">
+      <div className="SECTION_WRAPPER max-lg:w-11/12 lg:w-9/12 mx-auto pb-12 pt-24 md:py-16 lg:py-20">
         <div className="flex lg:flex-row flex-col items-stretch justify-start gap-10">
           <div
             className={`${
               inView1
                 ? "opacity-100 transition-all duration-700 ease-out bottom-0"
                 : "opacity-0 duration-500 transition-all -bottom-14"
-            } flex relative flex-1 flex-col gap-3`}
+            } relative flex flex-1 flex-col gap-3`}
             ref={ref1}
           >
             <h2
@@ -41,7 +42,7 @@ const IconGrid = () => {
               inView2
                 ? "opacity-100 transition-all duration-1000 ease-out bottom-0"
                 : "opacity-0 duration-500 transition-all -bottom-14"
-            } flex relative flex-1 lg:flex-row flex-col flex-wrap gap-6 order-[0]`}
+            } relative flex flex-1 lg:flex-row flex-col flex-wrap gap-6 order-[0]`}
             ref={ref2}
           >
             <Icon

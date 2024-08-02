@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div className="w-full bg-[#151516] text-white block ">
       <div className="CONTENT_WRAPPER w-11/12 lg:w-9/12 mx-auto py-20 block">
-        <div className="flex lg:flex-row flex-col pb-14 items-start gap-x-36 gap-y-20">
+        <div className="flex lg:flex-row flex-col pb-14 items-center lg:items-start gap-x-36 gap-y-20">
           <div className="flex flex-col gap-6">
             <Link
               to="/"

@@ -7,7 +7,7 @@ const Icons = () => {
   });
   return (
     <section className="ICONS w-full">
-      <div className="SECTION_WRAPPER max-sm:w-11/12 lg:w-9/12 flex flex-col mx-auto py-12 md:py-16 lg:py-20">
+      <div className="SECTION_WRAPPER max-lg:w-11/12 lg:w-9/12 flex flex-col mx-auto py-12 md:py-16 lg:py-20">
         <div className="flex flex-col gap-10 max-md:items-center max-md:justify-center max-md:text-center max-md:gap-4 lg:flex-row">
           <div
             className={`${

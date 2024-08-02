@@ -21,7 +21,7 @@ export default function NavBar() {
         </Link>
 
         <nav className="DESKTOP-NAV lg:flex items-center justify-between w-full md:flex hidden">
-          <ul className="list-none flex justify-evenly items-center lg:w-6/12 ">
+          <ul className="list-none flex justify-evenly items-center flex-1 grow-[3] md:max-w-xs lg:max-w-md">
             <Link
               to={"/"}
               className={`${
@@ -62,17 +62,8 @@ export default function NavBar() {
             >
               About
             </Link>
-            {/* <Link
-              to={"/test"}
-              className={`${
-                location === "/test"
-                  ? "text-blue-600"
-                  : "text-black hover:text-blue-600"
-              } transition duration-300 text-sm font-normal font-inter`}
-            >
-              Test
-            </Link> */}
           </ul>
+
           <div className="flex items-center justify-center gap-2">
             <a
               href="/"
@@ -106,7 +97,7 @@ export default function NavBar() {
               </svg>
             </a>
             <Link
-              to={"pricing"}
+              to={"/pricing"}
               className="w-fit h-fit border rounded-full py-2 px-6 text-sm"
             >
               Get Started
@@ -156,7 +147,9 @@ export default function NavBar() {
       <Separator width="9/12" />
       <ul
         className={` w-full text-sm flex flex-col gap-7 justify-start items-center bg-[#fbfbfb] lg:hidden  transition-all -z-10 absolute ${
-          isNavOpen ? "top-0 opacity-100 h-screen" : "-top-20 h-0 opacity-0"
+          isNavOpen
+            ? "top-0 opacity-100 h-screen duration-300"
+            : "-top-20 h-0 opacity-0 duration-300"
         }`}
       >
         <div
@@ -246,7 +239,7 @@ export default function NavBar() {
             </svg>
           </a>
           <Link
-            to={"pricing"}
+            to={"/pricing"}
             className="w-3/4 h-fit border rounded-full py-2 px-6 text-center "
           >
             Get Started

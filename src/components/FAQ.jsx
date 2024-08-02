@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "./Button";
+import Button from "../utils/Button";
 import { useInView } from "react-intersection-observer";
 
 const FAQ = () => {
@@ -9,7 +9,7 @@ const FAQ = () => {
   });
   return (
     <section className="FAQ w-full block">
-      <div className="CONTENT_PADDING rounded-[2.4rem] bg-gradient-to-b from-[rgba(54,97,246,.1)] to-[#f3f7fb]  m-auto max-sm:w-11/12 lg:w-9/12 py-10 md:py-12 lg:py-14">
+      <div className="CONTENT_PADDING rounded-[2.4rem] bg-gradient-to-b from-[rgba(54,97,246,.1)] to-[#f3f7fb]  m-auto max-lg:w-11/12 lg:w-9/12 py-10 md:py-12 lg:py-14">
         <div className="FAQ_WRAPPER flex gap-10 flex-col p-3 md:p-14 lg:p-16">
           <div className="FAQ_HEAD flex justify-center items-center flex-col text-center gap-3">
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-medium leading-none">

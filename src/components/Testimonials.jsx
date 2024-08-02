@@ -7,7 +7,7 @@ const Testimonials = () => {
   });
   return (
     <section className="TESTIMONIALS w-full block">
-      <div className="CONTENT_WRAPPER flex flex-col gap-14 m-auto max-sm:w-11/12 lg:w-9/12 py-12 md:py-16 lg:py-20">
+      <div className="CONTENT_WRAPPER flex flex-col gap-14 m-auto max-lg:w-11/12 lg:w-9/12 py-12 md:py-16 lg:py-20">
         <div
           className={`TESTIMONIAL_HEADING flex gap-4 flex-col text-center relative ${
             inView

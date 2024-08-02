@@ -5,12 +5,14 @@ import { HelmetProvider } from "react-helmet-async";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ScrollToTop from "./utils/ScrollToTop.jsx";
 import Spinner from "./utils/Spinner.jsx";
+import ErrorBoundary from "./utils/ErrorBoundary.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 const Home = lazy(() => import("./pages/Home.jsx"));
 const Pricing = lazy(() => import("./pages/Pricing.jsx"));
 const About = lazy(() => import("./pages/About.jsx"));
+const GetDemo = lazy(() => import("./pages/GetDemo.jsx"));
 const Product = lazy(() => import("./pages/Product.jsx"));
-const Test = lazy(() => import("./components/Test.jsx"));
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,7 @@ const router = createBrowserRouter([
         <Home />
       </Suspense>
     ),
+    errorElement: <ErrorBoundary />,
   },
   {
     path: "/pricing",
@@ -50,13 +53,17 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/test",
+    path: "/get-demo",
     element: (
       <Suspense fallback={<Spinner />}>
         <ScrollToTop />
-        <Test />
+        <GetDemo />
       </Suspense>
     ),
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 

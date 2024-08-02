@@ -1,9 +1,9 @@
-import Button from "./Button";
+import Button from "../utils/Button";
 import { SVGIcon1 } from "./IconGrid";
 const Prices = () => {
   return (
     <section className="PRICING_SECTION w-full block bg-[#f3f7fb]">
-      <div className="SECTION_WRAPPER max-sm:w-11/12 lg:w-9/12 mx-auto pb-16 block">
+      <div className="SECTION_WRAPPER max-lg:w-11/12 lg:w-9/12 mx-auto pb-16 block">
         <div className="flex gap-6 max-lg:flex-wrap max-lg:justify-center max-lg:items-center">
           <PriceCard
             pricingPrice="19"

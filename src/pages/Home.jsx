@@ -2,11 +2,11 @@ import { Helmet } from "react-helmet-async";
 import CTA from "../components/CTA";
 import FAQ from "../components/FAQ";
 import Features from "../components/Features";
-import Footer from "../components/Footer";
+import Footer from "../utils/Footer";
 import Hero from "../components/Hero";
 import Insights from "../components/Insights";
 import MainFeatures from "../components/MainFeatures";
-import NavBar from "../components/NavBar";
+import NavBar from "../utils/NavBar";
 import Partners from "../components/Partners";
 import Testimonials from "../components/Testimonials";
 function Home() {

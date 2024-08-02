@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "../utils/Button";
 import { useInView } from "react-intersection-observer";
 
 const Subhero = () => {
@@ -8,7 +8,7 @@ const Subhero = () => {
   });
   return (
     <section className="SUB_HERO w-full">
-      <div className="SECTION_WRAPPER max-sm:w-11/12 lg:w-9/12 flex flex-col mx-auto pb-12 pt-24 md:pb-24 md:pt-32 lg:pb-32 lg:pt-36">
+      <div className="SECTION_WRAPPER max-lg:w-11/12 lg:w-9/12 flex flex-col mx-auto pb-12 pt-24 md:pb-24 md:pt-32 lg:pb-32 lg:pt-36">
         <div className="flex flex-col max-md:items-center max-md:justify-center max-md:text-center max-md:gap-4 lg:flex-row">
           <div
             className={`${

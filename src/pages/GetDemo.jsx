@@ -1,22 +1,22 @@
 import { Helmet } from "react-helmet-async";
-import Footer from "../utils/Footer";
 import NavBar from "../utils/NavBar";
-import SmallHero from "../components/SmallHero";
-import Prices from "../components/Prices";
+import CTA from "../components/CTA";
+import Footer from "../utils/Footer";
+import Contact from "../components/Contact";
 
-const Pricing = () => {
+const GetDemo = () => {
   return (
     <div className="flex flex-col items-center relative justify-center">
       <Helmet>
-        <title>Pricing</title>
+        <title>Get Demo</title>
       </Helmet>
       <NavBar />
       <main className="w-full">
-        <SmallHero />
-        <Prices />
+        <Contact />
+        <CTA />
       </main>
       <Footer />
     </div>
   );
 };
-export default Pricing;
+export default GetDemo;

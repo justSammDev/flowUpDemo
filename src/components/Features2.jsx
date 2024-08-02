@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "../utils/Button";
 import { useInView } from "react-intersection-observer";
 
 const Features2 = () => {
@@ -16,7 +16,7 @@ const Features2 = () => {
   });
   return (
     <section className="FEATURES2 w-full">
-      <div className="SECTION_WRAPPER max-sm:w-11/12 lg:w-9/12 mx-auto pb-12 pt-24 md:py-16 lg:py-20">
+      <div className="SECTION_WRAPPER max-lg:w-11/12 lg:w-9/12 mx-auto pb-12 pt-24 md:py-16 lg:py-20">
         <div className="flex flex-col gap-6 lg:gap-10">
           <div
             className={`${

@@ -1,5 +1,5 @@
-import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
+import Footer from "../utils/Footer";
+import NavBar from "../utils/NavBar";
 import Subhero from "../components/Subhero";
 import Icons from "../components/Icons";
 import Features2 from "../components/Features2";

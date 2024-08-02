@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { useInView } from "react-intersection-observer";
-import Button from "./Button";
+import Button from "../utils/Button";
 
 const MainFeatures = () => {
   const [image1Visible, setImage1Visible] = useState(true);

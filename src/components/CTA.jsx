@@ -1,5 +1,5 @@
 import { useInView } from "react-intersection-observer";
-import Button from "./Button";
+import Button from "../utils/Button";
 
 const CTA = () => {
   const { ref, inView } = useInView({
@@ -13,7 +13,7 @@ const CTA = () => {
       }`}
       ref={ref}
     >
-      <div className="CONTENT_WRAPPER flex flex-col gap-14 m-auto max-sm:w-11/12 lg:w-9/12 py-12 md:py-16 lg:py-20">
+      <div className="CONTENT_WRAPPER flex flex-col gap-14 m-auto max-lg:w-11/12 lg:w-9/12 py-12 md:py-16 lg:py-20">
         <div className="text-center mx-auto max-w-[30rem]">
           <h2 className="text-3xl lg:text-6xl font-medium leading-none">
             Get to know us more. Join our newsletter.

@@ -1,5 +1,5 @@
 import { useInView } from "react-intersection-observer";
-import Button from "./Button";
+import Button from "../utils/Button";
 
 const Features = () => {
   const { ref: ref1, inView: inView1 } = useInView({
@@ -14,7 +14,7 @@ const Features = () => {
 
   return (
     <section className="FEATURES w-full block">
-      <div className="CONTENT_WRAPPER flex flex-col gap-14 m-auto max-sm:w-11/12 lg:w-9/12 py-12 md:py-16 lg:py-20">
+      <div className="CONTENT_WRAPPER flex flex-col gap-14 m-auto max-lg:w-11/12 lg:w-9/12 py-12 md:py-16 lg:py-20">
         <div
           className={`FEATURE_HEADING flex gap-4 flex-col lg:w-4/5 m-auto text-center relative ${
             inView1
